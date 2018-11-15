@@ -74,7 +74,7 @@ public class BTVN_8 {
         System.out.println("HÃY NHẬP VÀO MỘT SỐ NGUYÊN DƯƠNG!");
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
-                System.out.print("NHẬP GIÁ TRỊ CHO VỊ TRÍ ("+i+","+j+") CỦA MẢNG NHIỀU CHIỀU HIỆN TẠI: ");
+                System.out.print("NHẬP GIÁ TRỊ CHO VỊ TRÍ (" + i + "," + j + ") CỦA MẢNG NHIỀU CHIỀU HIỆN TẠI: ");
                 ar[i][j] = scanner.nextInt();
                 System.out.println();
             }
@@ -88,10 +88,75 @@ public class BTVN_8 {
         System.out.println();
     }
 
+    static void CAU4() {
+        Scanner scanner = new Scanner(System.in);
+        int[][] ar = new int[4][4];
+        System.out.println("HÃY NHẬP VÀO MỘT SỐ NGUYÊN DƯƠNG!");
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print("NHẬP GIÁ TRỊ CHO VỊ TRÍ (" + i + "," + j + ") CỦA MẢNG NHIỀU CHIỀU HIỆN TẠI: ");
+                ar[i][j] = scanner.nextInt();
+                System.out.println();
+            }
+        }
+        int count = 0;
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (ar[i][j] % 2 != 0) {
+                    count++;
+                }
+                if(ar[i][j] < 10){
+                    System.out.print("|0"+ar[i][j]+"|");
+                }
+                else{
+                    System.out.print("|"+ar[i][j]+"|");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println("----------------------------------------------------");
+        System.out.printf("HIỆN TẠI CÓ %d SỐ LẺ TRONG MA TRẬN HIỆN TẠI", count);
+        System.out.println();
+    }
+    
+    static void CAU5() {
+        Scanner scanner = new Scanner(System.in);
+        int[][] ar = new int[4][4];
+        System.out.println("HÃY NHẬP VÀO MỘT SỐ NGUYÊN DƯƠNG!");
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print("NHẬP GIÁ TRỊ CHO VỊ TRÍ (" + i + "," + j + ") CỦA MẢNG NHIỀU CHIỀU HIỆN TẠI: ");
+                ar[i][j] = scanner.nextInt();
+                System.out.println();
+            }
+        }
+        int total = 0;
+        System.out.println("----------------------------------------------------");
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                if(ar[i][j] < 10){
+                    System.out.print("|0"+ar[i][j]+"|");
+                }
+                else{
+                    System.out.print("|"+ar[i][j]+"|");
+                }
+                
+                total += ar[i][j];
+            }
+            System.out.println(" --->>> TỔNG DÒNG "+(i+1)+" TRONG MA TRẬN HIỆN TẠI --->>> "+total);
+            total = 0;
+            System.out.println();
+        }
+        System.out.println("----------------------------------------------------");
+        System.out.println();
+    }
+
     public static void main(String[] args) {
 //        CAU1();
 //        CAU2();
-        CAU3();
+//        CAU3();
+//        CAU4();
+        CAU5();
     }
 
 }
