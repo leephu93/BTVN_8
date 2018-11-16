@@ -140,7 +140,6 @@ public class BTVN_8 {
                 else{
                     System.out.print("|"+ar[i][j]+"|");
                 }
-                
                 total += ar[i][j];
             }
             System.out.println(" --->>> TỔNG DÒNG "+(i+1)+" TRONG MA TRẬN HIỆN TẠI --->>> "+total);
@@ -156,7 +155,7 @@ public class BTVN_8 {
 //        CAU2();
 //        CAU3();
 //        CAU4();
-        CAU5();
+//        CAU5();
     }
 
 }
