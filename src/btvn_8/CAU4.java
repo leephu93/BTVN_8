@@ -11,20 +11,195 @@ public class CAU4 {
         int spt = scanner.nextInt();
         int[] ar = new int[spt];
         for (int i = 0; i < ar.length; i++) {
-            System.out.printf("NHẬP VỊ TRÍ %d: ", i + 1);
+            System.out.printf("NHẬP VỊ TRÍ %d: ", i);
             ar[i] = scanner.nextInt();
         }
         System.out.println("----------------------------------------------------");
         System.out.print("PHẦN TỬ CÓ GIÁ TRỊ CHẴN VÀ VỊ TRÍ CHẴN: ");
         for (int i = 0; i < ar.length; i++) {
             if (i % 2 == 0 && ar[i] % 2 == 0) {
-                System.out.print(" "+ar[i]+" ");
+                System.out.print(" " + ar[i] + " ");
+            }
+        }
+        System.out.println();
+        System.out.println("----------------------------------------------------");
+    }
+
+    static void RUNB() {
+        System.out.print("NHẬP TỔNG SỐ PHẦN TỬ CHO MẢNG: ");
+        int spt = scanner.nextInt();
+        int[] ar = new int[spt];
+        for (int i = 0; i < ar.length; i++) {
+            System.out.printf("NHẬP VỊ TRÍ %d: ", i);
+            ar[i] = scanner.nextInt();
+        }
+        System.out.println("----------------------------------------------------");
+        System.out.print("PHẦN TỬ CÓ GIÁ TRỊ CHẴN VÀ VỊ TRÍ CHẴN: ");
+        for (int i = 0; i < ar.length; i++) {
+            if (i % 2 != 0 && ar[i] % 2 != 0) {
+                System.out.print(" " + ar[i] + " ");
+            }
+        }
+        System.out.println();
+        System.out.println("----------------------------------------------------");
+    }
+
+    static void RUNC() {
+        System.out.print("NHẬP TỔNG SỐ PHẦN TỬ CHO MẢNG: ");
+        int spt = scanner.nextInt();
+        int[] ar = new int[spt];
+        for (int i = 0; i < ar.length; i++) {
+            System.out.printf("NHẬP VỊ TRÍ %d: ", i);
+            ar[i] = scanner.nextInt();
+        }
+        System.out.println("----------------------------------------------------");
+        int tong = 0;
+        for (int i = 0; i < ar.length; i++) {
+            if (i % 2 != 0 && ar[i] % 2 != 0) {
+                tong += ar[i];
+            }
+        }
+        System.out.println("TỔNG GIÁ TRỊ CỦA CÁC PHẦN TỬ VỊ TRÍ LẺ CỦA MẢNG HIỆN TẠI: " + tong);
+        System.out.println("----------------------------------------------------");
+    }
+
+    static void RUND() {
+        System.out.print("NHẬP TỔNG SỐ PHẦN TỬ CHO MẢNG: ");
+        int spt = scanner.nextInt();
+        int[] ar = new int[spt];
+        for (int i = 0; i < ar.length; i++) {
+            System.out.printf("NHẬP VỊ TRÍ %d: ", i);
+            ar[i] = scanner.nextInt();
+        }
+        System.out.println("----------------------------------------------------");
+        int tong = 0;
+        for (int i = 0; i < ar.length; i++) {
+            if (i % 2 == 0 && ar[i] % 2 == 0) {
+                tong += ar[i];
+            }
+        }
+        System.out.println("TỔNG GIÁ TRỊ CỦA CÁC PHẦN TỬ VỊ TRÍ CHẴN CỦA MẢNG HIỆN TẠI: " + tong);
+        System.out.println("----------------------------------------------------");
+    }
+
+    static void RUNE() {
+        System.out.print("NHẬP TỔNG SỐ PHẦN TỬ CHO MẢNG: ");
+        int spt = scanner.nextInt();
+        int[] ar = new int[spt];
+        for (int i = 0; i < ar.length; i++) {
+            System.out.printf("NHẬP VỊ TRÍ %d: ", i);
+            ar[i] = scanner.nextInt();
+        }
+        System.out.println("----------------------------------------------------");
+        int max = 0, min = ar[0];
+        for (int i = 0; i < ar.length; i++) {
+            if (ar[i] > max) {
+                max = ar[i];
+            }
+            if (ar[i] < min) {
+                min = ar[i];
+            }
+        }
+        System.out.println("SỐ LỚN NHẤT TRONG MẢNG HIỆN TẠI: " + max);
+        System.out.println("SỐ NHỎ NHẤT TRONG MẢNG HIỆN TẠI: " + min);
+        System.out.println("----------------------------------------------------");
+    }
+
+    static void RUNF() {
+        System.out.print("NHẬP TỔNG SỐ PHẦN TỬ CHO MẢNG: ");
+        int spt = scanner.nextInt();
+        int[] ar = new int[spt];
+        for (int i = 0; i < ar.length; i++) {
+            System.out.printf("NHẬP VỊ TRÍ %d: ", i);
+            ar[i] = scanner.nextInt();
+        }
+        System.out.print("NHẬP VÀO GIÁ TRỊ X: ");
+        int x = scanner.nextInt();
+        System.out.println("----------------------------------------------------");
+        for (int i = 0; i < ar.length; i++) {
+            if (ar[i] > x) {
+                System.out.println("VỊ TRÍ " + i + " LỚN HƠN " + x + " : " + ar[i]);
+            } else if (ar[i] < x) {
+                System.out.println("VỊ TRÍ " + i + " NHỎ HƠN " + x + " : " + ar[i]);
+            } else {
+                System.out.println("VỊ TRÍ " + i + " BẰNG VỚI " + x + " : " + ar[i]);
             }
         }
         System.out.println("----------------------------------------------------");
     }
 
+    static void RUNGH() {
+        System.out.print("NHẬP TỔNG SỐ PHẦN TỬ CHO MẢNG: ");
+        int spt = scanner.nextInt();
+        int[] ar = new int[spt];
+        for (int i = 0; i < ar.length; i++) {
+            System.out.printf("NHẬP VỊ TRÍ %d: ", i);
+            ar[i] = scanner.nextInt();
+        }
+        System.out.println("----------------------------------------------------");
+        System.out.print("MẢNG HIỆN TẠI: ");
+        for (int i = 0; i < ar.length; i++) {
+            System.out.print(" " + ar[i] + " ");
+        }
+        for (int i = 0; i < ar.length - 1; i++) {
+            for (int j = i + 1; j < ar.length; j++) {
+                if (ar[i] > ar[j]) {
+                    int term = ar[i];
+                    ar[i] = ar[j];
+                    ar[j] = term;
+                }
+            }
+        }
+        System.out.println();
+        System.out.println("SỐ LỚN NHẤT THỨ 2 TRONG MẢNG: " + ar[ar.length - 2]);
+        System.out.println("SỐ NHỎ NHẤT THỨ 2 TRONG MẢNG: " + ar[1]);
+        System.out.println("----------------------------------------------------");
+    }
+
+    static void RUNI() {
+        System.out.print("NHẬP TỔNG SỐ PHẦN TỬ CHO MẢNG: ");
+        int spt = scanner.nextInt();
+        int[] ar = new int[spt];
+        for (int i = 0; i < ar.length; i++) {
+            System.out.printf("NHẬP VỊ TRÍ %d: ", i);
+            ar[i] = scanner.nextInt();
+        }
+        System.out.println("----------------------------------------------------");
+        System.out.print("MẢNG HIỆN TẠI: ");
+        for (int i = 0; i < ar.length; i++) {
+            System.out.print(" " + ar[i] + " ");
+        }
+        System.out.println();
+        System.out.println("CÁC SỐ TRÙNG NHAU CÓ TRONG MẢNG: ");
+        int term = 0;
+        for (int i = 0; i < ar.length - 1; i++) {
+            for (int j = i + 1; j < ar.length; j++) {
+                if (ar[i] == ar[j]) {
+                    if (j < 2) {
+                        System.out.print(" " + ar[i] + " ");
+                        term = ar[i];
+                    }
+
+                }
+
+            }
+            if (ar[i] != term) {
+                System.out.print(" " + ar[i] + " ");
+            }
+        }
+
+        System.out.println();
+        System.out.println("----------------------------------------------------");
+    }
+
     public static void main(String[] args) {
-        RUNA();
+//        RUNA();
+//        RUNB();
+//        RUNC();
+//        RUND();
+//        RUNE();
+//        RUNF();
+//        RUNGH();
+        RUNI();
     }
 }
