@@ -1,5 +1,6 @@
 package btvn_8;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CAU4 {
@@ -159,36 +160,70 @@ public class CAU4 {
     static void RUNI() {
         System.out.print("NHẬP TỔNG SỐ PHẦN TỬ CHO MẢNG: ");
         int spt = scanner.nextInt();
-        int[] ar = new int[spt];
-        for (int i = 0; i < ar.length; i++) {
-            System.out.printf("NHẬP VỊ TRÍ %d: ", i);
-            ar[i] = scanner.nextInt();
-        }
-        System.out.println("----------------------------------------------------");
-        System.out.print("MẢNG HIỆN TẠI: ");
-        for (int i = 0; i < ar.length; i++) {
-            System.out.print(" " + ar[i] + " ");
-        }
-        System.out.println();
-        System.out.println("CÁC SỐ TRÙNG NHAU CÓ TRONG MẢNG: ");
-        int term = 0;
-        for (int i = 0; i < ar.length - 1; i++) {
-            for (int j = i + 1; j < ar.length; j++) {
-                if (ar[i] == ar[j]) {
-                    if (j < 2) {
-                        System.out.print(" " + ar[i] + " ");
-                        term = ar[i];
-                    }
-
-                }
-
+        if (spt > 1) {
+            int[] ar = new int[spt];
+            for (int i = 0; i < ar.length; i++) {
+                System.out.printf("NHẬP VỊ TRÍ %d: ", i);
+                ar[i] = scanner.nextInt();
             }
-            if (ar[i] != term) {
+            System.out.println("----------------------------------------------------");
+            System.out.print("MẢNG HIỆN TẠI: ");
+            for (int i = 0; i < ar.length; i++) {
                 System.out.print(" " + ar[i] + " ");
             }
+            System.out.println();
+            System.out.print("CÁC SỐ TRÙNG NHAU CÓ TRONG MẢNG: ");
+            ArrayList arl = new ArrayList();
+            for (int item : ar) {
+                int count = 0;
+                for (int i = 0; i < ar.length; i++) {
+                    if (item == ar[i]) {
+                        count++;
+                        if (count >= 2) {
+                            if (arl.contains(item) == false) {
+                                arl.add(item);
+                            }
+                        }
+                    }
+                }
+            }
+            if (arl.isEmpty()) {
+                System.out.print("KHÔNG CÓ PHẦN TỬ NÀO TRÙNG NHAU TRONG MẢNG HIỆN TẠI");
+            } 
+            else {
+                arl.forEach((item) -> {
+                    System.out.print(" " + item + " ");
+                });
+            }
+            System.out.println();
+        } else {
+            System.err.println("TỔNG SỐ PHẦN TỬ TRONG MẢNG PHẢI LỚN HƠN 1 !");
         }
-
-        System.out.println();
+//        int[] ar_term1 = new int[spt];
+//        int[] ar_term2 = new int[spt];
+//        int term = 0;
+//        for (int i = 0; i < ar.length; i++) {
+//            for (int j = i + 1; j < ar.length; j++) {
+//                if (ar[i] == ar[j]) {
+//                    if (ar[i] != term) {
+//                        term = ar[i];
+//                        ar_term1[i] = ar[i];
+//                        ar_term2[i] = ar[i];
+//                    }
+//                }
+//            }
+//        }
+//        int term1 = 0;
+//        for (int i = 0; i < ar_term1.length; i++) {
+//            if (ar_term1[i] != 0) {
+//                for (int j = i + 1; j < ar_term1.length; j++) {
+//                    if (ar_term1[i] != term1){
+//                        term1 = ar_term1[i];
+//                        System.out.print(" " + ar_term1[i] + " ");
+//                    }
+//                }
+//            }
+//        }
         System.out.println("----------------------------------------------------");
     }
 
