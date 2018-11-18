@@ -199,31 +199,6 @@ public class CAU4 {
         } else {
             System.err.println("TỔNG SỐ PHẦN TỬ TRONG MẢNG PHẢI LỚN HƠN 1 !");
         }
-//        int[] ar_term1 = new int[spt];
-//        int[] ar_term2 = new int[spt];
-//        int term = 0;
-//        for (int i = 0; i < ar.length; i++) {
-//            for (int j = i + 1; j < ar.length; j++) {
-//                if (ar[i] == ar[j]) {
-//                    if (ar[i] != term) {
-//                        term = ar[i];
-//                        ar_term1[i] = ar[i];
-//                        ar_term2[i] = ar[i];
-//                    }
-//                }
-//            }
-//        }
-//        int term1 = 0;
-//        for (int i = 0; i < ar_term1.length; i++) {
-//            if (ar_term1[i] != 0) {
-//                for (int j = i + 1; j < ar_term1.length; j++) {
-//                    if (ar_term1[i] != term1){
-//                        term1 = ar_term1[i];
-//                        System.out.print(" " + ar_term1[i] + " ");
-//                    }
-//                }
-//            }
-//        }
         System.out.println("----------------------------------------------------");
     }
 

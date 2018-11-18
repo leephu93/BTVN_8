@@ -11,7 +11,7 @@ public class CAU5 {
     static ArrayList ar3 = new ArrayList();
 
     static void INSERT() {
-        System.out.println("HÃY 12 GIÁ TRỊ CHO CÁC PHẦN TỬ CỦA MẢNG HAI CHIỀU:");
+        System.out.println("HÃY NHẬP 12 GIÁ TRỊ CHO CÁC PHẦN TỬ CỦA MẢNG HAI CHIỀU:");
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 4; j++) {
                 System.out.printf("NHẬP GIÁ TRỊ CHO PHẦN TỬ VỊ TRÍ (%d,%d): ", i, j);
@@ -172,16 +172,99 @@ public class CAU5 {
             }
         }
         for (Object item : ar3) {
-            System.out.println("PHẦN TỬ CÓ GIÁ TRỊ TRÙNG NHAU: "+item);
+            System.out.println("PHẦN TỬ CÓ GIÁ TRỊ TRÙNG NHAU: " + item);
+        }
+        System.out.println("****************************************************");
+    }
+
+    static void RUNF() {
+        INSERT();
+        System.out.println("****************************************************");
+        VIEW();
+        System.out.println("****************************************************");
+        System.out.print("NHẬP VÀO GIÁ TRỊ CẦN XÁC ĐỊNH LỚN HƠN: ");
+        int x = scanner.nextInt();
+        System.out.println("KẾT QUẢ: ");
+        for (int i = 0; i < 3; i++) {
+            int tong = 0;
+            for (int j = 0; j < 4; j++) {
+                tong += ar1[i][j];
+            }
+            if (tong > x) {
+                for (int j = 0; j < 4; j++) {
+                    if (ar1[i][j] < 10) {
+                        System.out.printf("| 0%d |", ar1[i][j]);
+                    } else {
+                        System.out.printf("| %d |", ar1[i][j]);
+                    }
+                }
+                System.out.println();
+            }
+        }
+        System.out.println("****************************************************");
+    }
+
+    static void RUNG() {
+        INSERT();
+        System.out.println("****************************************************");
+        VIEW();
+        System.out.println("****************************************************");
+        System.out.print("NHẬP VÀO GIÁ TRỊ CẦN XÁC ĐỊNH LỚN HƠN: ");
+        int x = scanner.nextInt();
+        System.out.println("KẾT QUẢ: ");
+        for (int i = 0; i < 3; i++) {
+            int tong = 0;
+            for (int j = 0; j < 4; j++) {
+                tong += ar1[i][j];
+            }
+            if ((float) tong / 4 < (float) x) {
+                for (int j = 0; j < 4; j++) {
+                    if (ar1[i][j] < 10) {
+                        System.out.printf("| 0%d |", ar1[i][j]);
+                    } else {
+                        System.out.printf("| %d |", ar1[i][j]);
+                    }
+                }
+                System.out.println();
+            }
+        }
+        System.out.println("****************************************************");
+    }
+
+    static void RUNI() {
+        
+        System.out.print("NHẬP VÀO GIÁ TRỊ CẦN XÁC ĐỊNH LỚN HƠN: ");
+        int x = scanner.nextInt();
+        for (int i = 0; i < 4; i++) {
+            int tong = 0;
+            ArrayList ar_term = new ArrayList();
+            for (int j = 0; j < 3; j++) {
+                tong += ar1[j][i];
+                ar_term.add(ar1[j][i]);
+            }
+            if (tong > x) {
+                System.out.printf("CỘT SỐ %d",i+1);
+                System.out.println();
+                for (int j = 0; j < 3; j++) {
+                    System.out.println("|" + ar_term.get(j) + "|");
+                }
+            }
         }
         System.out.println("****************************************************");
     }
 
     public static void main(String[] args) {
+        INSERT();
+        System.out.println("****************************************************");
+        VIEW();
+        System.out.println("****************************************************");
 //        RUNA();
 //        RUNB();
 //        RUNC();
 //        RUND();
-        RUNE();
+//        RUNE();
+//        RUNF();
+//        RUNG();
+        RUNI();
     }
 }
