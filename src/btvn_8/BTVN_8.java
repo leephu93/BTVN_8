@@ -109,9 +109,101 @@ public class BTVN_8 {
         System.out.println("****************************************");
     }
 
+    static void SHOWBANNER() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println();
+            for (int j = 0; j < 18; j++) {
+                switch (i) {
+                    case 0:
+                        if(j % 2 == 0){
+                            System.out.print(" * ");
+                        }
+                        else{
+                            System.out.print(" - ");
+                        }
+                        break;
+                    case 1:
+                        switch (j) {
+                            case 0:
+                                System.out.print(" | ");
+                                break;
+                            case 17:
+                                System.out.print(" * ");
+                                break;
+                            default:
+                                System.out.print("   ");
+                                break;
+                        }
+                        break;
+                    case 2:
+                        switch (j) {
+                            case 0:
+                                System.out.print(" * ");
+                                break;
+                            case 17:
+                                System.out.print(" | ");
+                                break;
+                            case 4:
+                                System.out.print(" L ");
+                                break;
+                            case 5:
+                                System.out.print(" Ê ");
+                                break;
+                            case 7:
+                                System.out.print(" V ");
+                                break;
+                            case 8:
+                                System.out.print(" Ă ");
+                                break;
+                            case 9:
+                                System.out.print(" N ");
+                                break;
+                            case 11:
+                                System.out.print(" P ");
+                                break;
+                            case 12:
+                                System.out.print(" H ");
+                                break;
+                            case 13:
+                                System.out.print(" Ú ");
+                                break;
+                            default:
+                                System.out.print("   ");
+                                break;
+                        }
+                        break;
+                    case 3:
+                        switch (j) {
+                            case 0:
+                                System.out.print(" | ");
+                                break;
+                            case 17:
+                                System.out.print(" * ");
+                                break;
+                            default:
+                                System.out.print("   ");
+                                break;
+                        }
+                        break;
+                    case 4:
+                        if(j % 2 == 0){
+                            System.out.print(" * ");
+                        }
+                        else{
+                            System.out.print(" - ");
+                        }
+                        break;
+                };
+            }
+        }
+        System.out.println();
+        System.out.println();
+    }
+
     public static void main(String[] args) {
 //        INSERT1ELEMENT();
-        PAGINATION();
+//        PAGINATION();
+        SHOWBANNER();
     }
 
 }
